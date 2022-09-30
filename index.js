@@ -8,7 +8,7 @@ const userRouter = require('./routes/user.route');
 const cookieSession = require("cookie-session");
 
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 connectDB();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
