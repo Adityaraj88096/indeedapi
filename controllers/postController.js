@@ -1,5 +1,4 @@
 const Post = require("../models/Post");
-
 const postCtrl = {};
 
 postCtrl.getAllPosts = async(req, res) => {
@@ -36,6 +35,9 @@ postCtrl.createPost = async (req, res) => {
 }
 // Update Requests.
 
-
+// 
+postCtrl.getPrivateData =async (req, res) => {
+    const token = req.headers['Authorization'];
+}
 
 module.exports = postCtrl;
